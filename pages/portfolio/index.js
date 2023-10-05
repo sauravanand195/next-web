@@ -11,12 +11,13 @@ import ViewListIcon from '@mui/icons-material/ViewList';
 import DnsOutlinedIcon from '@mui/icons-material/DnsOutlined';
 import ContactMailOutlinedIcon from '@mui/icons-material/ContactMailOutlined';
 import Image from "next/image";
-import { useEffect } from "react";
+import CommonNav from "../../components/common/CommonNav";
 
 const index = () => {
     return (
         <>
-            <Grid container>
+            <CommonNav />
+            <Grid container style={{height:'calc(100vh - 68.5px)', overflow:'hidden'}}>
                 <Grid item xs={3}>
                     <div className="left-wrapper">
                         <div className="colorFFF">
@@ -65,7 +66,7 @@ const index = () => {
                         </div>
                     </div>
                 </Grid>
-                <Grid item xs={9}>
+                <Grid item xs={9} style={{height: "100%", overflow: "scroll", overflowX: "hidden"}}>
                     <div className="right-wrapper">
                         <div className="text-wrapper">
                             <div>
@@ -79,15 +80,15 @@ const index = () => {
                                     <div className="word3">Creator</div>
                                 </div>
                             </div>
-
-                            {/* <div className="prmry-text">Saurav Anand</div>
-                            <div className="scndry-text">I'm Software Developer</div> */}
                         </div>
+                    </div>
+                    <div style={{height:200}}>
+                        Saurav
                     </div>
                 </Grid>
             </Grid>
             <style jsx>{`
-                .left-wrapper{background: black; height: 100vh; text-align: center; position: relative;}
+                .left-wrapper{background: black; height: calc(100vh - 68.5px); text-align: center; position: relative;}
                 .right-wrapper{background: url("https://cdn.pixabay.com/photo/2015/01/09/11/08/startup-594090_640.jpg"); background-repeat: no-repeat; background-size: cover; height: 100%; opacity: 0.8;}
                 // .profile-pic{border-radius: 50%; border: 5px solid white; object-fit: cover;}
                 .icon-wrap{display: flex; justify-content: center;}
